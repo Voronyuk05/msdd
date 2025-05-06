@@ -11,7 +11,7 @@ export const MediaMaterials = () => {
     const [isOpened, setIsOpened] = useState<boolean>(false)
 
     return (
-        <Section section_class={styles.media_materials_section}>
+        <Section section_class={styles.media_materials_section} id="media_materials">
             <div className="container">
                 <div className="title">
                     <Image src={media_materials} alt="відео матеріали" width={400} height={80}/>

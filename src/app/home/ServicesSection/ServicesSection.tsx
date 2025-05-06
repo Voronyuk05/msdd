@@ -8,7 +8,7 @@ import styles from './ServicesSection.module.scss'
 export const ServicesSection = () => {
     
     return (
-        <Section section_class={styles.services_section}>
+        <Section section_class={styles.services_section} id='services'>
             <div className='container'>
                 <div className='title'>
                     <Image src={our_services} alt='наші послуги' width={400} height={80}/>

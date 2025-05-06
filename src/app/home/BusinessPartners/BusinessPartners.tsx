@@ -17,7 +17,7 @@ export const BusinessPartners = () => {
     });
 
     return (
-        <section className={`${inView ? styles.visible_section : ''} ${styles.business_partners_section}`} ref={ref}>
+        <section className={`${inView ? styles.visible_section : ''} ${styles.business_partners_section}`} ref={ref} id="business_partners">
             <div className="container">
                 <div className="title">
                     <Image src={business_partners} alt="наші ділові партнери" width={500} height={80}/>

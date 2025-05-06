@@ -46,7 +46,7 @@ export const Reviews = () => {
     }
 
     return (
-        <section className={`${styles.reviews_section} section io_section ${inView ? 'visible_io_section' : ''}`} ref={ref}>
+        <section className={`${styles.reviews_section} section io_section ${inView ? 'visible_io_section' : ''}`} ref={ref} id='reviews'>
             {currentReview && 
                 <Modal handleCloseModal={handleCloseModal}>
                     <div className={styles.modal_review}>

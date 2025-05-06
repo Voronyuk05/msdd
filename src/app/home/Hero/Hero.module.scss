@@ -14,6 +14,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 40px;
       .wrapper_text {
         width: 100%;
         max-width: 1200px;
@@ -23,9 +24,9 @@
         justify-content: center;
         gap: 5px;
         text-align: center;
-        opacity: 0.2;
+        opacity: 0;
         transform: translateY(100px) scale(1.02);
-        transition: 0.5s ease-out;
+        transition: all 0.5s ease-out;
         h5 {
           cursor: pointer;
           position: relative;
@@ -49,14 +50,24 @@
         h1 {
           cursor: pointer;
           span {
-            color: white;
+            color: $primary-color;
           }
         }
       }
-      .visible_text {
+      .wrapper_button {
+        opacity: 0;
+        width: 250px;
+        transition-delay: 0.5s;
+        transition: all 0.8s ease-in-out;
+      }
+    }
+    .visible_content {
+      .wrapper_text {
         opacity: 1;
-        transform: translateY(0px) scale(1);
-        transition: 0.5s ease-out;
+        transform: translateY(0%);
+      }
+      .wrapper_button {
+        opacity: 1;
       }
     }
     @media screen and (max-width: 1200px) {
