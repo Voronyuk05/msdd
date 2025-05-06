@@ -14,18 +14,18 @@ export const Header = () => {
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
     const [isShowed, setIsShowed] = useState<boolean>(true);
     const [isChecked, setIsChecked] = useState<boolean>(false);
-    let lastScrollY = window.scrollY;
+    let lastScrollY = typeof window !== 'undefined' ? window.scrollY : 0;
 
     useEffect(() => {
-        if (window) {
+        if (typeof window !== 'undefined') {
             window.document.body.style.overflowY = isChecked ? 'hidden' : 'auto'
         }
 
-        return () => {window.document.body.style.overflow = 'hidden auto'}
+        // return () => {window.document.body.style.overflow = 'hidden auto'}
     }, [])
 
     useEffect(() => {
-        if (window) {
+        if (typeof window !== 'undefined') {
             window.addEventListener('resize', () => {
                 if (window.document.body.clientWidth > 1200) {
                     setIsChecked(false)
@@ -37,11 +37,11 @@ export const Header = () => {
             }
         }
 
-        return () => window.removeEventListener('resize', () => {})
+        // return () => window.removeEventListener('resize', () => {})
     }, [])
 
     useEffect(() => {
-        if (window) {
+        if (typeof window !== 'undefined') {
             window.addEventListener("scroll", () => {
                 if (window.scrollY > 50) {
                     setIsScrolled(true)
@@ -53,14 +53,14 @@ export const Header = () => {
     }, [])
 
     useEffect(() => {
-        if (window) {
+        if (typeof window !== 'undefined') {
             window.addEventListener('scroll', () => {
                 if (window.scrollY > lastScrollY && window.scrollY > 200 && !isChecked) {
                     setIsShowed(false)
                 } else {
                   setIsShowed(true)
                 }
-                lastScrollY = window.scrollY;
+                lastScrollY = window ? window.scrollY : 0;
             });
         }
     }, [])

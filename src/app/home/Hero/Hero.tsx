@@ -13,18 +13,20 @@ export const Hero = () => {
     });
 
     useEffect(() => {
-        window.addEventListener('resize', () => {
+        if (typeof window !== 'undefined') {
+            window.addEventListener('resize', () => {
+                if (window.document.body.clientWidth < 1200) {
+                    setIsAdapted(true)
+                } else {
+                    setIsAdapted(false)
+                }
+            })
+    
             if (window.document.body.clientWidth < 1200) {
                 setIsAdapted(true)
             } else {
                 setIsAdapted(false)
             }
-        })
-
-        if (window.document.body.clientWidth < 1200) {
-            setIsAdapted(true)
-        } else {
-            setIsAdapted(false)
         }
 
         return () => window.removeEventListener('resize', () => {})

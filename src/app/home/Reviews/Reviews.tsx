@@ -25,17 +25,20 @@ export const Reviews = () => {
     });
 
     useEffect(() => {
+        if (typeof window !== 'undefined') {
+            window.addEventListener('resize', () => {
+                const windowWidth = window.document.body.clientWidth
+                if (windowWidth > 1200) {
+                    setSlidesPerView(3)
+                } else if (windowWidth < 1200 && windowWidth > 768) {
+                    setSlidesPerView(2)
+                } else {
+                    setSlidesPerView(1)
+                }
+            })
+        }
 
-        window.addEventListener('resize', () => {
-            const windowWidth = window.document.body.clientWidth
-            if (windowWidth > 1200) {
-                setSlidesPerView(3)
-            } else if (windowWidth < 1200 && windowWidth > 768) {
-                setSlidesPerView(2)
-            } else {
-                setSlidesPerView(1)
-            }
-        })
+        return () => window.removeEventListener('resize', () => {})
     })
 
     function handleCloseModal() {
