@@ -5,6 +5,12 @@ import type { NextRequest } from 'next/server'
 
 
 export default async function middleware(req: NextRequest) {
+  if (req.nextUrl.pathname === '/' || req.nextUrl.pathname === '') {
+    const url = req.nextUrl.clone();
+    url.pathname = '/home';
+    return NextResponse.redirect(url);
+  }
+  
   const nonce = Buffer.from(crypto.randomUUID()).toString('base64')
   const cspHeader = `
     default-src: 'self';
@@ -41,15 +47,11 @@ export default async function middleware(req: NextRequest) {
     contentSecurityPolicyHeaderValue
   )
 
-  if (req.nextUrl.pathname === '/') {
-    return NextResponse.redirect(new URL('/home', req.nextUrl))
-  }
-
   return response
 }
  
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|.*\\.png$).*)'],
+  matcher: ['/'],
 }
 
 
