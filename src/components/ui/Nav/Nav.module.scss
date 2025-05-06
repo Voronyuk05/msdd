@@ -1,0 +1,81 @@
+@import '../../../app/colors.scss';
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    a {
+        position: relative;
+        color: $primary-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        cursor: pointer;
+        &:hover {
+            color: $secondary-color;
+            &::before {
+                width: 100%;
+                transition: 0.3s ease-in-out;
+            }
+        }
+        &:active {
+            color: $secondary-color;
+        }
+        &:focus {
+            color: $secondary-color;
+        }
+        &::before {
+            content: "";
+            width: 0%;
+            height: 2px;
+            background: $secondary-color;
+            position: absolute;
+            bottom: -2px;
+            transition: 0.3s ease-in-out;
+        }
+    }
+    .active {
+        position: relative;
+        color: $secondary-color;
+    }
+    @media screen and (max-width: 1200px) {
+        align-items: flex-start;
+        justify-content: flex-start;
+        a {
+            font-size: 22px;
+            &:hover {
+                color: $primary-active-color;
+                &::before {
+                    width: 100%;
+                    transition: 0.3s ease-in-out;
+                }
+            }
+            &:active {
+                color: $primary-active-color;
+            }
+            &:focus {
+                color: $primary-active-color;
+            }
+            &::before {
+                content: "";
+                width: 0%;
+                height: 2px;
+                background: $primary-active-color;
+                position: absolute;
+                bottom: -2px;
+                transition: 0.3s ease-in-out;
+            }
+        }
+        .active {
+            color: $primary-active-color;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}

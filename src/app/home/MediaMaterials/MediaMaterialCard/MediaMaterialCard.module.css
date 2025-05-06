@@ -1,0 +1,53 @@
+.media_card {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.media_card .media_card_img {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(10%);
+  transition: all 0.3s ease-in-out;
+}
+.media_card .media_card_img .media {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: none;
+  border-radius: 10px;
+}
+.media_card .media_card_text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.media_card .media_card_text a {
+  color: #005aab;
+  font-size: 18px;
+}
+.media_card .media_card_text a:hover {
+  color: #004683;
+}
+
+.visible_media_card {
+  opacity: 1;
+}
+.visible_media_card .media_card_img {
+  transform: translateY(0%);
+}/*# sourceMappingURL=MediaMaterialCard.module.css.map */

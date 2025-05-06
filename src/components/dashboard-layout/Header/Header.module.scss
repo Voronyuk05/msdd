@@ -1,0 +1,203 @@
+@import '../../../app/colors.scss';
+
+.header {
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px $primary-color solid; 
+    transition: 0.3s ease-in;
+    .container {
+        z-index: 9;
+        width: 95%;
+        max-width: 1500px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        height: 100px;
+        .wrapper_company_name {
+            width: 370px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            text-align: end;
+            h5 {
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .container {
+            .wrapper_company_name {
+                display: none;
+            }
+            .menu_backdrop {
+                z-index: -1;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                background-color: transparent;
+                pointer-events: none;
+                .menu {
+                    z-index: 100;
+                    transform: translateY(-100%);
+                    height: 20vh;
+                    width: 100vw;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding: 50px;
+                    color: white;
+                    background-color: $secondary-color;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+            .menu_opened {
+                z-index: 99;
+                width: 100vw;
+                height: 100vh;
+                background: $backdrop-color;
+                right: 0px;
+                transition: 0.4s;
+                .menu {
+                    transform: translateY(0%);
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .container {
+            .menu_backdrop {
+                justify-content: flex-start;
+                .menu {
+                    width: 100vw;
+                    height: 100vh;
+                    align-items: flex-start;
+                    .cross {
+                        right: 30px
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 380px) {
+        .container {
+            .menu_backdrop {
+                .menu {
+                    padding: 20px;
+                    .cross {
+                        display: block;
+                        position: absolute;
+                        top: 20px;
+                        right: 20px
+                    }
+                }
+            }
+        }
+    }
+}
+
+.attached {
+    background-color: $white-color;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.hidden {
+    top: -200px;
+}
+
+.menu_button {
+    display: none;
+	opacity: 0;
+    z-index: 99;
+    @media screen and (max-width: 1200px) {					
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+		opacity: 1;
+		position: relative;
+        width: 50px;
+		height: 50px;
+        border: 1px solid $primary-color;
+        border-radius: 6px;
+		cursor: pointer;
+		span,
+		&::before,
+		&::after {
+			left: 0;
+			height: 8%;
+			width: 60%;
+			transition: all 0.3s ease 0s;
+			background-color: $primary-color;
+		}
+
+		&::before,
+		&::after {
+			content: "";
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+    }
+    @media screen and (max-width: 380px) {
+        width: 40px;
+		height: 40px;
+        span,
+        &::before,
+		&::after {
+			left: 0;
+			height: 6%;
+			width: 60%;
+		}
+    }
+}
+
+.checked {
+    @media screen and (max-width: 1200px) {
+        z-index: 999;
+        gap: 0px;
+        background-color: rgba(0, 0, 0, 0);
+
+        transition: all 0.3s ease 0s;
+        & span {
+            transform: scale(0) translate(0, -50%);
+        }
+        &::before {
+            position: absolute;
+
+            width: 100%;
+            top: 50%;
+            transform: rotate(-45deg) translate(0, -50%);
+            transition: all 0.3s ease 0s;
+        }
+        &::after {
+            position: absolute;
+
+            width: 100%;
+            bottom: 50%;
+            transform: rotate(45deg) translate(0, 50%);
+            transition: all 0.3s ease 0s;
+        }  
+    }        
+    
+}

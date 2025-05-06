@@ -1,0 +1,91 @@
+@import "../../../app/colors.scss";
+
+.footer {
+    width: 100%;
+    background-color: $primary-bg-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container {
+        width: 95%;
+        max-width: 1400px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .main_footer {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .social_icons {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                svg {
+                    width: 50px;
+                    height: 50px;
+                }
+                .facebook_icon {
+                    color: #3b5998;
+                }
+                .youtube_icon {
+                    color: #c4302b;
+                }
+            }
+        }
+        .sub_footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            padding: 20px 0px;
+            background-color: #fff;
+            .copyright {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                .copyright_text {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5px;
+                }
+                svg {
+                    color: $grey-color;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .container {
+            .main_footer {
+                .social_icons, .copyright {
+                    max-width: 300px;
+                    svg {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+            .sub_footer {
+                .copyright {
+                    max-width: 300px;
+                    .copyright_text {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0px;
+                    }
+                    svg {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
+        }
+    }
+}

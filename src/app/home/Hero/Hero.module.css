@@ -1,0 +1,77 @@
+.hero {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.hero .container {
+  width: 95%;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero .container .wrapper_text {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-align: center;
+  opacity: 0.2;
+  transform: translateY(100px) scale(1.02);
+  transition: 0.5s ease-out;
+}
+.hero .container .wrapper_text h5 {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .container .wrapper_text h5::before {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background: #ffb403;
+  position: absolute;
+  bottom: -2px;
+  transition: 0.3s ease-in-out;
+}
+.hero .container .wrapper_text h5:hover::before {
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+.hero .container .wrapper_text h1 {
+  cursor: pointer;
+}
+.hero .container .wrapper_text h1 span {
+  color: white;
+}
+.hero .container .visible_text {
+  opacity: 1;
+  transform: translateY(0px) scale(1);
+  transition: 0.5s ease-out;
+}
+@media screen and (max-width: 1200px) {
+  .hero .container .wrapper_text h1 {
+    max-width: 600px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero .container .wrapper_text h1 {
+    max-width: 400px;
+    font-size: 58px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero .container .wrapper_text h1 {
+    max-width: 300px;
+    font-size: 42px;
+  }
+}/*# sourceMappingURL=Hero.module.css.map */

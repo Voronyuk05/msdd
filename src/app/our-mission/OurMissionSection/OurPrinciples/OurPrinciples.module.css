@@ -1,0 +1,104 @@
+.principles {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 0px;
+}
+.principles .title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.principles .principles_list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.principles .principles_list .principle_card {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.principles .principles_list .principle_card .principle_card_img {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f3f7;
+  border-radius: 25%;
+}
+.principles .principles_list .principle_card .principle_card_text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.principles .principles_list .principle_card:hover {
+  background: #005aab;
+  transform: scale(1.01);
+}
+.principles .principles_list .principle_card:hover .principle_card_img {
+  background: #ffffff;
+}
+.principles .principles_list .principle_card:hover .principle_card_text h5 {
+  color: #ffffff;
+}
+@media screen and (max-width: 768px) {
+  .principles .principles_list {
+    width: 70%;
+  }
+  .principles .principles_list .principle_card {
+    width: 150px;
+    height: 150px;
+  }
+  .principles .principles_list .principle_card .principle_card_img {
+    width: 60px;
+    height: 60px;
+  }
+  .principles .principles_list .principle_card .principle_card_img img {
+    width: 80%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .principles {
+    padding: 20px 0px;
+  }
+  .principles .principles_list {
+    width: 100%;
+  }
+  .principles .principles_list .principle_card {
+    width: 140px;
+    height: 150px;
+    padding: 5px;
+  }
+  .principles .principles_list .principle_card .principle_card_img {
+    width: 50px;
+    height: 50px;
+  }
+  .principles .principles_list .principle_card .principle_card_img img {
+    width: 80%;
+    height: auto;
+  }
+  .principles .principles_list .principle_card .principle_card_text h5 {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=OurPrinciples.module.css.map */

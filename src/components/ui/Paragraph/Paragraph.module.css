@@ -1,0 +1,10 @@
+.paragraph {
+  font-size: 18px;
+  line-height: 22px;
+}
+@media screen and (max-width: 768px) {
+  .paragraph {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}/*# sourceMappingURL=Paragraph.module.css.map */

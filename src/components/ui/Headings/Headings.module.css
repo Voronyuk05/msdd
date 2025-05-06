@@ -1,0 +1,58 @@
+.h1_huge {
+  font-size: 64px;
+}
+
+.h1 {
+  font-size: 36px;
+}
+
+.h2 {
+  font-size: 30px;
+}
+
+.h3 {
+  font-size: 24px;
+}
+
+.h4 {
+  font-size: 20px;
+}
+
+.h5 {
+  font-size: 18px;
+}
+
+.h6 {
+  font-size: 16px;
+}
+
+.h6_small {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .h1_huge {
+    font-size: 56px;
+  }
+  .h1 {
+    font-size: 30px;
+  }
+  .h2 {
+    font-size: 26px;
+  }
+  .h3 {
+    font-size: 20px;
+  }
+  .h4 {
+    font-size: 18px;
+  }
+  .h5 {
+    font-size: 16px;
+  }
+  .h6 {
+    font-size: 14px;
+  }
+  .h6_small {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=Headings.module.css.map */

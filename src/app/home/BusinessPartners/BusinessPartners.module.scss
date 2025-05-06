@@ -1,0 +1,100 @@
+.business_partners_section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    .card {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        .card_img {
+            img {
+                border-radius: 50%;
+            }
+        }
+        .card_text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 10px;
+            .card_title {
+                width: 70%;
+            }
+            .card_quote {
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    &::after {
+        content: "";
+        z-index: 100;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 50em;
+        background: linear-gradient(to bottom, transparent, white); /* Adjust colors to match bg */
+        pointer-events: none; /* Let clicks pass through */
+        transition: all 0.5s ease-in-out;
+    }
+    @media screen and (max-width: 1200px) {
+        .card {
+            height: auto;
+            .card_text {
+                .card_title {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .card {
+            width: 400px;
+            height: auto;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+            .card_text {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+                gap: 10px;
+                .card_title {
+                    width: 100%;
+                }
+                .card_quote {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.visible_section {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    &::after {
+        content: "";
+        z-index: 100;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 0%;
+        background: linear-gradient(to bottom, transparent, white); /* Adjust colors to match bg */
+        pointer-events: none; /* Let clicks pass through */
+    }
+}

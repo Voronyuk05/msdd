@@ -1,0 +1,158 @@
+@import "../../../app/colors.scss";
+
+.contacts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    .title {
+        width: 100vw;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background-color: $primary-bg-color;
+        text-transform: uppercase;
+        text-align: center;
+        h5 {
+            font-family: "Oswald";
+        }
+        h1 {
+            font-size: 100px;
+            font-family: "Oswald";
+        }
+    }
+    .content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .content_container {
+            width: 95%;
+            max-width: 1500px;
+            padding: 50px 0px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            .content_text {
+                width: 500px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 20px;
+                .contacts_list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                  .contacts_item {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 10px;               
+                    .contacts_link {
+                        font-size: 20px;
+                        cursor: pointer;
+                        &:hover {
+                            color: $primary-color;
+                            text-decoration: underline;
+                        }
+                    }
+                    .contact_item_icon {
+                        width: 35px;
+                        height: 35px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        background-color: $primary-bg-color;
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                            fill: $secondary-color;
+                        }
+                    } 
+                  }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .content {
+            .content_container {
+                flex-direction: column-reverse;
+                align-items: center;
+                justify-content: center;
+                gap: 50px;
+                .content_text {
+                    width: 60%;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .title {
+            height: auto;
+            gap: 10px;
+            padding: 30px 20%;
+            h1 {
+                font-size: 70px;
+                line-height: 75px
+            }
+        }
+        .content {
+            .content_container {
+                .content_text {
+                    width: 80%;
+                    .contacts_list {
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        .contacts_item {
+                            .contact_item_icon {
+                                width: 25px;
+                                height: 25px;
+                                svg {
+                                    width: 15px;
+                                    height: 15px;
+                                }
+                            }
+                            .contacts_link {
+                                font-size: 16px
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .title {
+            h1 {
+                font-size: 55px;
+                line-height: 60px
+            }
+        }
+        .content {
+            .content_container {
+                .content_text {
+                    .contacts_list {
+                        .contacts_item {
+                            .contacts_link {
+                                font-size: 14px
+                            }
+                            .contacts_email {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

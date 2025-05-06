@@ -1,0 +1,24 @@
+@import '../../colors.scss';
+
+.media_materials_section {
+    transition: 0.3;
+    .content {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 30px;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+    .showed {
+        height: auto;
+        transition: all 0.3s ease-in-out;
+    }
+    .wrapper_button {
+        width: 200px;
+    }
+}

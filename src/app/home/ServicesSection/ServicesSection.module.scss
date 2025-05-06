@@ -1,0 +1,44 @@
+@import '../../colors.scss';
+
+.services_section {
+    .content {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        column-gap: 30px;
+        row-gap: 10px;
+    }
+    @media screen and (max-width: 768px) {
+        .content {
+            row-gap: 40px;
+            .service_card {
+                width: 150px;
+                height: 200px;
+                .service_card_img {
+                    width: 75px;
+                    height: 75px;
+                    img {
+                        width: 80%;
+                        height: 80%;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .content {
+            .service_card {
+                width: 135px;
+                .service_card_text {
+                    h4 {
+                        font-size: 16px
+                    }
+                }
+            }
+        }
+    }
+}

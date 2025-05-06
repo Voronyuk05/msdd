@@ -1,0 +1,49 @@
+@import '../../../app/colors.scss';
+
+.backdrop {
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    .modal {
+        z-index: 100;
+        position: relative;
+        width: 600px;
+        height: 400px;
+        padding: 20px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        background: $white-color;
+        border: none;
+        border-radius: 15px;
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $bg-color;
+            border: none;
+            border-radius: 25%;
+            svg {
+                width: 80%;
+                height: 80%;
+                color: $black-color
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .modal {
+            width: 80%;
+        }
+    }
+}
