@@ -9,7 +9,7 @@ import styles from './ContactForm.module.scss'
 export const ContactForm = () => {
     const {register, handleSubmit, reset} = useForm<IContactForm>({})
 
-    const onSubmit: SubmitHandler<IContactForm> = (data) => {
+    const onSubmit: SubmitHandler<IContactForm> = () => {
         reset()
     }
 
