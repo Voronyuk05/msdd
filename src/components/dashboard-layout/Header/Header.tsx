@@ -17,44 +17,52 @@ export const Header = () => {
     let lastScrollY = window.scrollY;
 
     useEffect(() => {
-        window.document.body.style.overflowY = isChecked ? 'hidden' : 'auto'
+        if (window) {
+            window.document.body.style.overflowY = isChecked ? 'hidden' : 'auto'
+        }
 
         return () => {window.document.body.style.overflow = 'hidden auto'}
     }, [])
 
     useEffect(() => {
-        window.addEventListener('resize', () => {
+        if (window) {
+            window.addEventListener('resize', () => {
+                if (window.document.body.clientWidth > 1200) {
+                    setIsChecked(false)
+                }
+            })
+    
             if (window.document.body.clientWidth > 1200) {
                 setIsChecked(false)
             }
-        })
-
-        if (window.document.body.clientWidth > 1200) {
-            setIsChecked(false)
         }
 
         return () => window.removeEventListener('resize', () => {})
     }, [])
 
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 50) {
-                setIsScrolled(true)
-            } else {
-                setIsScrolled(false)
-            }
-        })
+        if (window) {
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 50) {
+                    setIsScrolled(true)
+                } else {
+                    setIsScrolled(false)
+                }
+            })
+        }
     }, [])
 
     useEffect(() => {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > lastScrollY && window.scrollY > 200 && !isChecked) {
-                setIsShowed(false)
-            } else {
-              setIsShowed(true)
-            }
-            lastScrollY = window.scrollY;
-        });
+        if (window) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > lastScrollY && window.scrollY > 200 && !isChecked) {
+                    setIsShowed(false)
+                } else {
+                  setIsShowed(true)
+                }
+                lastScrollY = window.scrollY;
+            });
+        }
     }, [])
 
     useEffect(() => {
