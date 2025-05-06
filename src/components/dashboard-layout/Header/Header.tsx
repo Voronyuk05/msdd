@@ -20,7 +20,7 @@ export const Header = () => {
         window.document.body.style.overflowY = isChecked ? 'hidden' : 'auto'
 
         return () => {window.document.body.style.overflow = 'hidden auto'}
-    })
+    }, [])
 
     useEffect(() => {
         window.addEventListener('resize', () => {
@@ -28,7 +28,13 @@ export const Header = () => {
                 setIsChecked(false)
             }
         })
-    })
+
+        if (window.document.body.clientWidth > 1200) {
+            setIsChecked(false)
+        }
+
+        return () => window.removeEventListener('resize', () => {})
+    }, [])
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -38,7 +44,7 @@ export const Header = () => {
                 setIsScrolled(false)
             }
         })
-    })
+    }, [])
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -49,7 +55,7 @@ export const Header = () => {
             }
             lastScrollY = window.scrollY;
         });
-    })
+    }, [])
 
     useEffect(() => {
         setIsChecked(false)

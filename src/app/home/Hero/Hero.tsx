@@ -20,7 +20,15 @@ export const Hero = () => {
                 setIsAdapted(false)
             }
         })
-    })
+
+        if (window.document.body.clientWidth < 1200) {
+            setIsAdapted(true)
+        } else {
+            setIsAdapted(false)
+        }
+
+        return () => window.removeEventListener('resize', () => {})
+    }, [])
 
     return (
         <section className={styles.hero}>
