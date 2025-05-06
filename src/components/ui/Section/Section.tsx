@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer'
 export const Section = ({section_class, children}: {section_class: string, children: ReactNode}) => {
     const {ref, inView} = useInView({
         triggerOnce: true,
-        threshold: 0.5,
+        threshold: 0,
         trackVisibility: true,
         delay: 100
     });
