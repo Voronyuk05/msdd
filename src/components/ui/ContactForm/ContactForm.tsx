@@ -10,7 +10,6 @@ export const ContactForm = () => {
     const {register, handleSubmit, reset} = useForm<IContactForm>({})
 
     const onSubmit: SubmitHandler<IContactForm> = (data) => {
-        const {email, date, tel, message} = data
         reset()
     }
 
