@@ -5,7 +5,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --primary: #005aab;
-  --secondary: #ffb403;
+  --secondary: #ffd903;;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -126,6 +126,7 @@ div.swiper {
 }
 
 div.swiper-container {
+  position: relative;
   height: 100%;
   max-height: 100vw;
   min-height: 0;
@@ -150,7 +151,7 @@ div.swiper-slide {
 }
 
 
-.swiper-wrapper {
+div.swiper-wrapper {
   max-width: 1500px; 
   max-height: 100%;
   height: 100%;
@@ -164,21 +165,32 @@ div.swiper-slide {
 }
 
 div.swiper-button-prev {
+  z-index: 99;
   position: absolute;
-  top: 50%;
-  width: 0px;
-  height: 60px;
+  top: auto;
+  bottom: -40px;
+  left: 10px;
+  width: 12px;
+  height: 24px;
   margin-top: 0px;
   color: $primary-color
 }
 
 div.swiper-button-next {
+  z-index: 99;
   position: absolute;
-  top: 50%;
-  width: 0px;
-  height: 60px;
+  top: auto;
+  bottom: -40px;
+  right: 10px;
+  width: 12px;
+  height: 24px;
   margin-top: 0px;
   color: $primary-color;
+}
+
+div.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  position: absolute;
+  bottom: -40px
 }
 
 

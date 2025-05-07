@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useInView } from 'react-intersection-observer';
-import { Headings } from '@/components/ui/Headings/Headings'
+import { Headings } from '@/components/ui/Headings/Headings';
 import { SecondaryButton } from '../../../components/ui/Buttons/Buttons';
-import styles from './Hero.module.scss'
+import styles from './Hero.module.scss';
 
 export const Hero = () => {
     const {push} = useRouter()
@@ -39,6 +39,7 @@ export const Hero = () => {
         <section className={styles.hero} id='hero'>
             <div className={`${styles.container} ${inView ? styles.visible_content : ''}`} ref={ref}>
                 <div className={styles.wrapper_text}>
+                    <Headings heading='h5' color='secondary' weight='700'>М-СДД</Headings>
                     <Headings heading='h1_huge' color='secondary' weight='700'>Міжнародний {`${isAdapted ? '' : '-'}`} спеціальний департамент детективів</Headings>
                 </div>
                 <div className={styles.wrapper_button}>
