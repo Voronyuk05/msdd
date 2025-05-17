@@ -43,7 +43,7 @@ export const Header = () => {
     useEffect(() => {
         if (typeof window !== 'undefined') {
             window.addEventListener("scroll", () => {
-                if (window.scrollY > 50) {
+                if (window.scrollY > 50 && !isChecked) {
                     setIsScrolled(true)
                 } else {
                     setIsScrolled(false)
@@ -55,12 +55,12 @@ export const Header = () => {
     useEffect(() => {
         if (typeof window !== 'undefined') {
             window.addEventListener('scroll', () => {
-                if (window.scrollY > lastScrollY && window.scrollY > 200 && !isChecked) {
+                if (window.scrollY > (lastScrollY +100) && window.scrollY > 200 && !isChecked) {
                     setIsShowed(false)
                 } else {
                   setIsShowed(true)
                 }
-                lastScrollY = window ? window.scrollY : 0;
+                lastScrollY = typeof window !== 'undefined' ? window.scrollY : 0;
             });
         }
     }, [])
