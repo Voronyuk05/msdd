@@ -1,5 +1,4 @@
 
-
 import type { Metadata } from "next";
 import Head from "next/head";
 import type { WithContext, Organization } from "schema-dts";

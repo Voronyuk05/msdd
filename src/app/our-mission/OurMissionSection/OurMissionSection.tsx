@@ -1,4 +1,5 @@
-import { OurPrinciples } from './OurPrinciples/OurPrinciples';
+import { principlesCardsData } from '@/data/cardsBlocks.data';
+import { CardsBlock } from '@/components/ui/CardsBlock/CardsBlock';
 import { Section } from '@/components/ui/Section/Section';
 import { Headings } from '../../../components/ui/Headings/Headings';
 import { Paragraph } from '../../../components/ui/Paragraph/Paragraph';
@@ -11,7 +12,7 @@ export const OurMisisonSection = () => {
     return (
         <Section section_class={styles.our_mission_section}>
             <div className="title">
-                <Image src={our_mission_heading_image} alt="our mission" width={300} height={80} />
+                <Image src={our_mission_heading_image} alt="наша місія" width={300} height={80} />
             </div>
             <div className="content">
                 <div className="article">
@@ -22,11 +23,11 @@ export const OurMisisonSection = () => {
                         <Image src={our_misison_content} alt="investigation table" width={1000} height={440} />
                     </div>
                     <Paragraph color='black' weight='500' className='article_text'>Основна мета Міжнародного — Спеціального Департаменту Детективів – це захист прав наших громадян і допомога в відновленні справедливості. Кожна справа розслідується професійно і прискіпливо до усіх деталей.</Paragraph>
-                    <OurPrinciples/>
+                    <CardsBlock block_name="principles" title="Наші Принципи" cardsList={principlesCardsData}/>
                 </div>
                 <div className="article">
                     <Headings heading='h3' color='black' weight='700' className='article_title'>М-СДД в Україні: переваги співпраці з нами</Headings>
-                    <Paragraph color='black' weight='500' className='article_text'>Міжнародний — Спеціальний Департамент Детективів працює виключно у межах правового поля і користується законними методами отримання інформації. За роки трудової діяльності в державних і приватних структурах України наші експерти заручилися підтримкою колег і партнерів. Ми маємо налагоджену співпрацю з правоохоронними органами, адвокатськими об`єднаннями, громадськими спілкам</Paragraph>
+                    <Paragraph color='black' weight='500' className='article_text'>Міжнародний — Спеціальний Департамент Детективів працює виключно у межах правового поля і користується законними методами отримання інформації. За роки трудової діяльності в державних і приватних структурах України наші експерти заручилися підтримкою колег і партнерів. Ми маємо налагоджену співпрацю з правоохоронними органами, адвокатськими об`єднаннями, громадськими спілкам.</Paragraph>
                     <Paragraph color='black' weight='500' className='article_text'>Звертаючись до нас, Ви можете бути впевнені, що отримаєте всю необхідну інформацію і гарантовано вирішите свою справу.</Paragraph>
                     <Paragraph color='black' weight='500' className='article_text'>Для нас немає безнадійних справ. Є тільки не вирішені до нас!</Paragraph>
                 </div>

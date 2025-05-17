@@ -6,6 +6,57 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    .services {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h6 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        svg {
+            height: max-content;
+            width: max-content;
+            transition: all 0.3s ease-in-out;
+        }
+        .dropdown {
+            width: 200px;
+            height: 0px;
+            overflow: hidden;
+            position: absolute;
+            top: 40px;
+            left: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 10px;
+            background: $white-color;
+            border: $grey-color;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            transition: all 0.3s ease-in-out;
+            a {
+                margin: 5px 10px;
+            }
+        }
+    }
+    .visible_services {
+        svg {
+            transform: rotateX(180deg);
+        }
+        .dropdown {
+            height: 400px;
+            overflow-y: scroll;
+        }
+    }
     a {
         position: relative;
         color: $primary-color;
@@ -44,6 +95,11 @@
     @media screen and (max-width: 1200px) {
         align-items: flex-start;
         justify-content: flex-start;
+        .services {
+            h6 {
+                font-size: 22px;
+            }
+        }
         a {
             font-size: 22px;
             &:hover {
@@ -77,5 +133,19 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+        .services {
+            flex-direction: column;
+            align-items: flex-start;
+            .dropdown {
+                position: relative;
+                top: 0px;
+                left: 0px;
+            }
+        }
+        .visible_services {
+            .dropdown {
+                margin-top: 20px;
+            }
+        }
     }
 }

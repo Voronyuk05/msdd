@@ -18,11 +18,11 @@ export const Header = () => {
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            window.document.body.style.overflowY = isChecked ? 'hidden' : 'auto'
+            window.document.body.style.overflow = isChecked ? 'hidden' : 'auto'
         }
 
-        // return () => {window.document.body.style.overflow = 'hidden auto'}
-    }, [])
+        return () => {window.document.body.style.overflow = 'hidden auto'}
+    })
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -37,7 +37,7 @@ export const Header = () => {
             }
         }
 
-        // return () => window.removeEventListener('resize', () => {})
+        return () => window.removeEventListener('resize', () => {})
     }, [])
 
     useEffect(() => {

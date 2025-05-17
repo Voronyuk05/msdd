@@ -6,7 +6,7 @@ import styles from "./Logo.module.scss";
 export default function Logo() {
     return (
         <div className={styles.logo}>
-            <Image src={logo} alt="international special department of detectives logo" priority width={75} height={75} />
+            <Image src={logo} alt="лого Міжнародного - Спеціального Департаменту Детективів" priority width={75} height={75} />
             <Headings color="primary" heading="h1" weight="700">М-СДД</Headings>
         </div>
     )
