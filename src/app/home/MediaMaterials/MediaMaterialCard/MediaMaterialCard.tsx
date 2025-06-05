@@ -18,9 +18,11 @@ export const MediaMaterialCard = ({link, title}: IMediaMaterial) => {
     return (
         <div className={`${styles.media_card} ${inView ? styles.visible_media_card : ''}`} ref={ref}>
             <div className={styles.media_card_img}>
+                {inView && 
                 <Suspense fallback={<LoadingCircle/>}>
                     <MediaComponent link={link} title={title} />
                 </Suspense>
+                }
             </div>
             <div className={styles.media_card_text}>
                 <div className={styles.card_title}>
