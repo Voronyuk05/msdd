@@ -1,7 +1,7 @@
 'use client'
 
-import LoadingCircle from "@/components/ui/LoadingCircle/LoadingCircle";
+import LoadingPage from "@/components/ui/LoadingPage/LoadingPage";
 
 export default function Loading()  {
-    return <LoadingCircle/>
+    return <LoadingPage/>
 }
