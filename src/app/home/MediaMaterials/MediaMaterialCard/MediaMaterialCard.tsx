@@ -14,7 +14,7 @@ export const MediaMaterialCard = ({link, title}: IMediaMaterial) => {
     return (
         <div className={`${styles.media_card} ${inView ? styles.visible_media_card : ''}`} ref={ref}>
             <div className={styles.media_card_img}>
-                <iframe className={styles.media} width="400px" height="200px" src={link} title={title} allowFullScreen></iframe>
+                {inView && <iframe className={styles.media} width="400px" height="200px" src={link} title={title} allowFullScreen loading="lazy"></iframe>}
             </div>
             <div className={styles.media_card_text}>
                 <div className={styles.card_title}>
