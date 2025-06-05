@@ -10,13 +10,13 @@ import styles from './Footer.module.scss'
 export function Footer() {
 
     return (
-        <footer role="footer" className={styles.footer}>
+        <footer className={styles.footer}>
             <div className={styles.container}>
                 <div className={styles.main_footer}>
                     <div className={styles.social_icons}>
-                        <Link href="https://www.facebook.com/CbrUkraine/" target="_blank"><FcGoogle className={styles.google_icon}/></Link>
-                        <Link href="https://workspaceupdates.googleblog.com/2023/04/new-community-features-for-google-chat-and-an-update-currents%20.html" target="_blank"><FaFacebook className={styles.facebook_icon}/></Link>
-                        <Link href="https://www.youtube.com/channel/UCS5KTrFQPcy7pkbP5fz0tLA" target="_blank"><FaYoutube className={styles.youtube_icon}/></Link>
+                        <Link href="https://www.facebook.com/CbrUkraine/" target="_blank" aria-label="See us on Facebook"><FaFacebook className={styles.facebook_icon}/></Link>
+                        <Link href="https://workspaceupdates.googleblog.com/2023/04/new-community-features-for-google-chat-and-an-update-currents%20.html" target="_blank" aria-label="Read about us on our Google Blog"><FcGoogle className={styles.google_icon}/></Link>
+                        <Link href="https://www.youtube.com/channel/UCS5KTrFQPcy7pkbP5fz0tLA" target="_blank" aria-label="Watch us on Youtube"><FaYoutube className={styles.youtube_icon}/></Link>
                     </div>
                 </div>
                 <div className={styles.sub_footer}>

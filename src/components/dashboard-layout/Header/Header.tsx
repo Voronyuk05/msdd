@@ -14,6 +14,7 @@ export const Header = () => {
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
     const [isShowed, setIsShowed] = useState<boolean>(true);
     const [isChecked, setIsChecked] = useState<boolean>(false);
+    const [isServicesMenuShowed, setIsServicesMenuShowed] = useState<boolean>(false)
     let lastScrollY = typeof window !== 'undefined' ? window.scrollY : 0;
 
     useEffect(() => {
@@ -29,11 +30,13 @@ export const Header = () => {
             window.addEventListener('resize', () => {
                 if (window.document.body.clientWidth > 1200) {
                     setIsChecked(false)
+                    setIsServicesMenuShowed(false)
                 }
             })
     
             if (window.document.body.clientWidth > 1200) {
                 setIsChecked(false)
+                setIsServicesMenuShowed(false)
             }
         }
 
@@ -73,15 +76,21 @@ export const Header = () => {
     const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
         if (e.target === e.currentTarget) {
             setIsChecked(false)
+            setIsServicesMenuShowed(false)
         }
     }
 
     const handleSetChecked = () => {
         setIsChecked(!isChecked)
+        setIsServicesMenuShowed(false)
+    }
+
+    const handleToggleServicesDropdownVisibility = () => {
+        setIsServicesMenuShowed(!isServicesMenuShowed)
     }
 
     return (
-        <header role='header' className={`${isScrolled && styles.attached } ${!isShowed && styles.hidden} ${styles.header}`}>
+        <header className={`${isScrolled && styles.attached } ${!isShowed && styles.hidden} ${styles.header}`}>
             <div className={styles.container}>
                 <div className={styles.wrapper_logo}>
                     <Logo/>
@@ -91,7 +100,7 @@ export const Header = () => {
                 </div>
                 <div className={`${styles.menu_backdrop} ${isChecked ? styles.menu_opened : ''}`} onClick={handleBackdropClick}>
                     <div className={styles.menu}>
-                        <Nav/>
+                        <Nav isServicesMenuShowed={isServicesMenuShowed} handleToggleServicesDropdownVisibility={handleToggleServicesDropdownVisibility}/>
                     </div>
                 </div>
                 <div className={styles.wrapper_company_name}>
