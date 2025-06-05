@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/pages/api/server.jsapi/src/app/api/handler.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/pages/api/server.jsapi/src/app/api/handler.ts", "next-sitemap.config.js"],
   "exclude": ["node_modules"]
 }

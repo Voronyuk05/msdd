@@ -60,7 +60,7 @@ const imb = Roboto({
 
 export const metadata: Metadata = {
   title: "М-СДД",
-  description: "Офіційний вебсайт Міжнародного - спеціального департамену детекивів. Ми надаємо широкий спектр послуг, включаючи розслідування, консалтинг та підтримку в кримінальних справах. ",
+  description: "Офіційний веб сайт Міжнародного - спеціального департаменту детективів. Ми надаємо широкий спектр послуг, включаючи розслідування, консалтинг та підтримку в кримінальних справах. ",
 };
 
 export default function RootLayout({
@@ -78,9 +78,11 @@ export default function RootLayout({
         __html: JSON.stringify(articleStructuredData),
         }}/>
         <meta httpEquiv="Content-Security-Policy" />
-        <meta property="og:title" content="international special detective department" />
-        <meta property="og:description" content="bureau" />
+        <meta property="og:title" content="М-СДД - Міжнародний - Спеціальний Департамент Детективів" />
+        <meta property="og:description" content="Підтримка безпеки, справидливості та захист прав громадян" />
         <meta property="og:type" content="professional service" />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="touch-icon-iphone.png" />
         <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png"/>
