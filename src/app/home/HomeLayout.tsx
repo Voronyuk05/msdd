@@ -4,7 +4,7 @@ import TransitionBackdrop from '../../components/ui/TransitionBackdrop/Transitio
 import { Hero } from './Hero/Hero';
 import { ServicesSection } from '../../components/ui/ServicesSection/ServicesSection'
 import { BusinessPartners } from './BusinessPartners/BusinessPartners';
-import { MediaMaterials } from './MediaMaterials/MediaMaterials';
+import { Activities } from './Activities/Activities';
 import { Reviews } from "./Reviews/Reviews";
 import { ContactsSection } from '../../components/ui/ContactsSection/ContactsSection';
 
@@ -15,7 +15,7 @@ export default function HomeLayout({children}: PropsWithChildren) {
             <Hero/>
             <ServicesSection/>
             <BusinessPartners/>
-            <MediaMaterials/>
+            <Activities/>
             <Reviews/>
             <ContactsSection/>
             {children}

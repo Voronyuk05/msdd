@@ -1,6 +1,6 @@
-import { IMediaMaterial } from "@/types/mediaMaterials.types";
+import { IActivities } from "@/types/activities.types";
 
-export const mediaMaterialsData: IMediaMaterial[] = [
+export const activitiesData: IActivities[] = [
     {
         id: 1,
         link: "https://www.youtube.com/embed/3nqPnA1FThU?si=MVcZQ4fs38hcb1lq",
