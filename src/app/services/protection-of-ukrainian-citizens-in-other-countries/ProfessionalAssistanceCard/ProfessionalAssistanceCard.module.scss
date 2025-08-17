@@ -1,0 +1,72 @@
+@import '../../../../app/colors.scss';
+
+.professional_assistance_card {
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 30px 10px;
+    border-radius: 20px;
+    opacity: 0;
+    perspective: 800px;
+    transform: translateZ(40px) translateY(-10%);
+    transition: all 0.5s ease-in-out;
+    .professional_assistance_card_img {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $bg-color;
+        border-radius: 25%;
+    }
+    .professional_assistance_card_text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 5px;
+    }
+    &:hover {
+        background: $primary-color;
+        transform: scale(1.01);
+        .professional_assistance_card_img {
+            background: $white-color;
+        }
+        .professional_assistance_card_text {
+            h4, p {
+                color: $white-color
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        width: 150px;
+        height: 220px;
+        padding: 20px 10px;
+        .professional_assistance_card_img {
+            width: 75px;
+            height: 75px;
+            img {
+                width: 80%;
+                height: 80%;
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        width: 135px;
+        .professional_assistance_card_text {
+            h4, p {
+                font-size: 16px
+            }
+        }
+    }
+}
+.visible_card {
+    opacity: 1;
+    transform: translateZ(0px) translateY(0%) scale(1);
+}

@@ -106,3 +106,12 @@
 .article_list_item {
 
 }
+
+.article_cards_block {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
