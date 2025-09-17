@@ -49,12 +49,6 @@ export const ContactsSection = () => {
                                     <div className={styles.contact_item_icon}>
                                         <FaPhoneAlt/>
                                     </div>
-                                    <Link href="tel:+330780109083" className={styles.contacts_link}>+33 07-80-10-9083</Link>
-                                </div>
-                                <div className={styles.contacts_item}>
-                                <div className={styles.contact_item_icon}>
-                                        <FaPhoneAlt/>
-                                    </div>
                                     <Link href="tel:+380988894542" className={styles.contacts_link}>+380 98-889-45-42</Link>
                                 </div>
                                 <div className={styles.contacts_item}>
@@ -67,7 +61,7 @@ export const ContactsSection = () => {
                                     <div className={styles.contact_item_icon}>
                                         <FaPhoneAlt/>
                                     </div>
-                                    <Link href="tel:+380503754146" className={styles.contacts_link}>+380 50-375-41-46</Link>
+                                    <Link href="tel:+380503754146" className={styles.contacts_link}>+33 78-034-98-33</Link>
                                 </div>
                             </div>
                         </div>
