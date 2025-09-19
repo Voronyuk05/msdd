@@ -58,7 +58,7 @@ export const Header = () => {
     useEffect(() => {
         if (typeof window !== 'undefined') {
             window.addEventListener('scroll', () => {
-                if (window.scrollY > (lastScrollY +100) && window.scrollY > 200 && !isChecked) {
+                if (window.scrollY > lastScrollY && window.scrollY > 200 && !isChecked) {
                     setIsShowed(false)
                 } else {
                   setIsShowed(true)
