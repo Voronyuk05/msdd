@@ -23,12 +23,11 @@
     }
     @media screen and (max-width: 768px) {
         .logo_item {
-            width: 100px;
             img {
                 width: 40px;
                 height: 30px;
             }
-            h5 {
+            h6 {
                 font-size: 15px;
             }
         }
@@ -41,7 +40,7 @@
                 width: 35px;
                 height: 25px;
             }
-            h5 {
+            h6 {
                 font-size: 13px;
             }
         }
@@ -58,7 +57,7 @@
                 width: 35px;
                 height: 25px;
             }
-            h5 {
+            h6 {
                 font-size: 11px;
             }
         }
