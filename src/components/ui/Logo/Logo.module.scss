@@ -1,7 +1,70 @@
+@import '../../../app/colors.scss';
+
 .logo {
+    height: 140px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 5px;
+    .logo_item {
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .line {
+        width: 2px;
+        height: 80%;
+        background-color: $backdrop-color;
+        margin: 0 10px;
+    }
+    @media screen and (max-width: 768px) {
+        .logo_item {
+            width: 100px;
+            img {
+                width: 40px;
+                height: 30px;
+            }
+            h5 {
+                font-size: 15px;
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        height: 100px;
+        .logo_item {
+            width: 100px;
+            img {
+                width: 35px;
+                height: 25px;
+            }
+            h5 {
+                font-size: 13px;
+            }
+        }
+        .line {
+            height: 60%;
+            margin: 0px 5px;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        height: 100px;
+        .logo_item {
+            width: 80px;
+            img {
+                width: 35px;
+                height: 25px;
+            }
+            h5 {
+                font-size: 11px;
+            }
+        }
+        .line {
+            height: 60%;
+            margin: 0px 5px;
+        }
+    }
 }
