@@ -92,9 +92,7 @@ export const Header = () => {
     return (
         <header className={`${isScrolled && styles.attached } ${!isShowed && styles.hidden} ${styles.header}`}>
             <div className={styles.container}>
-                <div className={styles.wrapper_logo}>
-                    <Logo/>
-                </div>
+                <Logo/>
                 <div className={`${styles.menu_button} ${isChecked ? `${styles.checked}` : ''}`} onClick={() => handleSetChecked()}>
                     <span></span>
                 </div>
