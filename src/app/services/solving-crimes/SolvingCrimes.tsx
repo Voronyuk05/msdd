@@ -15,7 +15,7 @@ export function SolvingCrimes() {
             </div>
             <div className="content">
                 <div className="article">
-                    <Headings heading='h3' color='black' weight='700' className='article_title'>Розкриття злочинів та протиправних дій — Міжнародний — спеціальний департамент детективів</Headings>
+                    <Headings heading='h3' color='black' weight='700' className='article_title'>Розкриття злочинів та протиправних дій — Міжнародний — спеціалізований департамент детективів</Headings>
                     <Paragraph color='black' weight='500' className='article_text'>Якщо Ви потрапили у складні життєві обставини, а правоохоронні органи належним чином не можуть Вам допомогти, вихід є. Експертна група М-СДД виконає всі необхідні слідчі дії, щоб допомогти розплутати будь-який злочин, вчинений проти Вашої особистості. Ми допоможемо розкрити такі противоправні дії, як:</Paragraph>
                     <CardsBlock block_name="crimes" title="Ми допоможемо розкрити такі противоправні дії" cardsList={crimesCardsData}/>
                 </div>

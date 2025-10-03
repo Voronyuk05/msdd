@@ -39,7 +39,7 @@ export const Hero = () => {
         <section className={styles.hero} id='hero'>
             <div className={`${styles.container} ${inView ? styles.visible_content : ''}`} ref={ref}>
                 <div className={styles.wrapper_text}>
-                    <Headings heading='h1_huge' color='secondary' weight='700'>Міжнародний {`${isAdapted ? '' : '-'}`} спеціальний департамент детективів</Headings>
+                    <Headings heading='h1_huge' color='secondary' weight='700'>Міжнародний {`${isAdapted ? '' : '-'}`} спеціалізований департамент детективів</Headings>
                 </div>
                 <div className={styles.wrapper_button}>
                     <SecondaryButton onClick={() => push('/#services')}>

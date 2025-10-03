@@ -102,7 +102,7 @@ export const Header = () => {
                     </div>
                 </div>
                 <div className={styles.wrapper_company_name}>
-                    <Headings heading='h5' color='primary' weight='700'>Міжнародний спеціальний департамент детективів</Headings>
+                    <Headings heading='h5' color='primary' weight='700'>Міжнародний спеціалізований департамент детективів</Headings>
                     <Image src={order} alt="order of ukrainian governance and the area of ukraine" width={110} height={75} />
                 </div>
             </div>
